@@ -1,5 +1,11 @@
 <head>
     <title>Travail Pratique 3</title>
+    <style>
+        .color{
+            background-color: red;
+            color: white;
+        }
+    </style>
 </head>
 <html>
     <body>
@@ -8,9 +14,11 @@
             date_default_timezone_set('America/Toronto');
             $timezone = date_default_timezone_get();
 
-            $time = date('h:i');
-
-            echo $time
+            $hour = date('h');
+            $min = date('i');
+            echo $hour;
+            echo "</br>";
+            echo $min;
         ?>
 
         <table>
@@ -23,10 +31,16 @@
             foreach($heures as $heure){
                 echo "<tr><th>" . $heure . "</th>";
                 foreach($minutes as $minute){
-                    echo "<td>" . $minute . "</td>";
+                    if ($heure == $hour && $minute == $min){
+                        echo "<td class='color'> X </td>";
+                    }
+                    else{
+                        echo "<td>" . $minute . "</td>";
+                    }
                 }
-                echo "</tr>";
             }
+                echo "</tr>";
+            
         ?>
 
         </table>
