@@ -14,11 +14,10 @@
             date_default_timezone_set('America/Toronto');
             $timezone = date_default_timezone_get();
 
+            $time = date('h:i A');
             $hour = date('h');
             $min = date('i');
-            echo $hour;
-            echo "</br>";
-            echo $min;
+            echo $time;
         ?>
 
         <table>
