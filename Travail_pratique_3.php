@@ -1,5 +1,5 @@
 <head>
-    <title>Travail Pratique 3</title>
+    <title>Tableau de temps</title>
     <style>
         .color{
             background-color: red;
@@ -9,7 +9,7 @@
 </head>
 <html>
     <body>
-        <h1>Travail pratique 3</h1>
+        <h1>Tableau de temps</h1>
         <?php
             date_default_timezone_set('America/Toronto');
             $timezone = date_default_timezone_get();
